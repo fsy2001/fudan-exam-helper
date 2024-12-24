@@ -20,9 +20,9 @@ def send_content(url, title, content):
     driver.get(url)
     driver.find_element(By.XPATH, '//*[@id="right_nav"]/a[2]').click()
     sleep(2)
-    driver.find_element(By.ID, 'compose-message-subject').send_keys(title)
-    driver.find_element(By.XPATH, '//*[@id="compose-new-message"]/form/div[2]/textarea').send_keys(content)
-    driver.find_element(By.XPATH, '/html/body/div[4]/div[4]/div[2]/button[2]').click()
+    driver.find_element(By.ID, 'TextInput_5').send_keys(title)
+    driver.find_element(By.ID, 'TextArea_0').send_keys(content)
+    driver.find_element(By.CLASS_NAME, 'css-137bls6-view--inlineBlock-baseButton').click()
     sleep(1)
 
 def process_student(row, students):
